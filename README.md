@@ -46,8 +46,8 @@ Please check out the [WPGlobus Website](http://www.wpglobus.com/) for additional
 
 ## Screenshots ##
 
-### 1. Plugin admin interface. ###
-![Plugin admin interface.](https://github.com/WPGlobus/wpglobus-for-black-studio-tinymce-widget/master/assets/screenshot-1.png)
+### 1. Wysiwyg editor interface. ###
+![Wysiwyg editor interface.](https://github.com/WPGlobus/wpglobus-for-black-studio-tinymce-widget/blob/master/assets/screenshot-1.png)
 
 ## Changelog ##
 
