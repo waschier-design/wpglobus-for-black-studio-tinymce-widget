@@ -13,6 +13,7 @@ License URI: https://github.com/WPGlobus/wpglobus-for-black-studio-tinymce-widge
 **WPGlobus for Black Studio TinyMCE Widget** is an extension to the WPGlobus plugin.
 
 > **NOTE:** You need to install and activate the [WPGlobus Multilingual Plugin](https://wordpress.org/plugins/wpglobus/) version 1.2.4 or later before installing the WPGlobus for Black Studio TinyMCE Widget extension.
+> **NOTE:** Add-on was tested with [Black Studio TinyMCE Widget](https://wordpress.org/plugins/black-studio-tinymce-widget/) plugin from version 2.2.5
 
 = More info =
 
