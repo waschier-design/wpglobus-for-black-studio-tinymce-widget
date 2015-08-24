@@ -47,7 +47,7 @@ Please check out the [WPGlobus Website](http://www.wpglobus.com/) for additional
 
 == Screenshots ==
 
-1. Plugin admin interface.
+1. Wysiwyg editor interface.
 
 == Changelog ==
 
