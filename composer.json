@@ -1,0 +1,7 @@
+{
+  "name": "wpglobus/wpglobus-for-black-studio-widget",
+  "description": "WPGlobus for Black Studio TinyMCE Widget",
+  "type": "wordpress-plugin",
+  "license": "GPL-2.0",
+  "require": {}
+}
