@@ -5,7 +5,7 @@
  * Description: WPGlobus add-on for Black Studio TinyMCE Widget
  * Text Domain: 
  * Domain Path: 
- * Version: 1.0.0
+ * Version: 1.0.1
  * Author: WPGlobus
  * Author URI: http://www.wpglobus.com/
  * Network: false
@@ -39,7 +39,7 @@ if ( class_exists('Black_Studio_TinyMCE_Plugin') ) {
 			return;
 		}
 		
-		define( 'WPGLOBUS_BS_WIDGET', '1.0.0' );
+		define( 'WPGLOBUS_BS_WIDGET', '1.0.1' );
 
 		require_once( 'class-wpglobus-for-black-studio-widget.php' );
 
