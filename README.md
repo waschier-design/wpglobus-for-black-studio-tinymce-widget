@@ -13,11 +13,12 @@
 **WPGlobus for Black Studio TinyMCE Widget** is an extension to the WPGlobus plugin.
 
 > **NOTE:** You need to install and activate the [WPGlobus Multilingual Plugin](https://wordpress.org/plugins/wpglobus/) version 1.2.4 or later before installing the WPGlobus for Black Studio TinyMCE Widget extension.
+
 > **NOTE:** Add-on was tested with [Black Studio TinyMCE Widget](https://wordpress.org/plugins/black-studio-tinymce-widget/) plugin from version 2.2.5
 
 ### More info ###
 
-* [WPGlobus for Black Studio TinyMCE Widget home page](http://www.wpglobus.com/).
+* [WPGlobus for Black Studio TinyMCE Widget home page](http://www.wpglobus.com/extensions-archive/wpglobus-for-black-studio-tinymce-widget-archive/).
 * [GitHub code repository](https://github.com/WPGlobus/wpglobus-for-black-studio-tinymce-widget).
 
 ## Installation ##
@@ -51,6 +52,9 @@ Please check out the [WPGlobus Website](http://www.wpglobus.com/) for additional
 ![Wysiwyg editor interface.](https://github.com/WPGlobus/wpglobus-for-black-studio-tinymce-widget/blob/master/assets/screenshot-1.png)
 
 ## Changelog ##
+
+### 1.0.1 ###
+* Fixed: dialog start icon position for new widget
 
 ### 1.0.0 ###
 * Initial release

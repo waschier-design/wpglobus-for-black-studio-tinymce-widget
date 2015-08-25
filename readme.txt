@@ -18,7 +18,7 @@ License URI: https://github.com/WPGlobus/wpglobus-for-black-studio-tinymce-widge
 
 = More info =
 
-* [WPGlobus for Black Studio TinyMCE Widget home page](http://www.wpglobus.com/).
+* [WPGlobus for Black Studio TinyMCE Widget home page](http://www.wpglobus.com/extensions-archive/wpglobus-for-black-studio-tinymce-widget-archive/).
 * [GitHub code repository](https://github.com/WPGlobus/wpglobus-for-black-studio-tinymce-widget/).
 
 == Installation ==
@@ -51,6 +51,9 @@ Please check out the [WPGlobus Website](http://www.wpglobus.com/) for additional
 1. Wysiwyg editor interface.
 
 == Changelog ==
+
+= 1.0.1 =
+* Fixed: dialog start icon position for new widget
 
 = 1.0.0 =
 * Initial release
