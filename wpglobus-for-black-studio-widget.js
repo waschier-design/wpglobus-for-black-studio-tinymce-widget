@@ -20,7 +20,7 @@
 		},
 		language: {},
 		content: {},
-		ajaxActionId: null,
+		ajaxActionId: undefined,
 		init: function(args) {
 			api.option = $.extend( api.option, args );
 			api.addButtons();
@@ -48,10 +48,21 @@
 			$('.mce-'+api.option.button_class+id).removeClass( api.option.activeClass );
 		},
 		fixDialogStartIcon: function( id ) {
-			var p = $('#'+id).parents('.widget').attr('id');
-			if ( typeof p != 'undefined' ) {
-				$('#'+p+' .wpglobus_dialog_start.wpglobus_dialog_icon').css('margin-right','20px');
-			}	
+			var p;
+			if ( typeof id === 'undefined' ) {
+				$('.widget .wp-editor-area').each(function(i,e){
+					id = $(e).attr('id');
+					p = $('#'+id).parents('.widget').attr('id');
+					if ( typeof p !== 'undefined' ) {
+						$('#'+p+' .wpglobus_dialog_start.wpglobus_dialog_icon').css('margin-right','20px');
+					}	
+				});					
+			} else {	
+				p = $('#'+id).parents('.widget').attr('id');
+				if ( typeof p != 'undefined' ) {
+					$('#'+p+' .wpglobus_dialog_start.wpglobus_dialog_icon').css('margin-right','20px');
+				}
+			}			
 		},
 		addAjaxListener: function( id ) {
 			$(document).ajaxComplete(function(event, jqxhr, settings){
@@ -60,11 +71,10 @@
 						// deleted widget
 					} else {
 						// update or added new widget
-						// @todo make fixDialogStartIcon for new widget
-						if ( api.ajaxActionId != null ) {
+						api.fixDialogStartIcon(api.ajaxActionId);
+						if ( typeof api.ajaxActionId != 'undefined' ) {
 							window.switchEditors.go( api.ajaxActionId, 'tmce' );
-							api.fixDialogStartIcon(api.ajaxActionId);
-							api.ajaxActionId = null;
+							api.ajaxActionId = undefined;
 						}	
 					}	
 				}	
