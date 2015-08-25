@@ -83,9 +83,6 @@
 						tinymce.triggerSave();
 					}	
 					api.ajaxActionId = id;
-					if ( 'tinymce' != getUserSetting('editor') ) {
-						setUserSetting('editor','tinymce');
-					}
 				});
 			}
 		},	
