@@ -24,7 +24,7 @@
 		init: function(args) {
 			api.option = $.extend( api.option, args );
 			api.addButtons();
-			api.addAjaxListener();
+			api.addListeners();
 			if ( 'tinymce' != getUserSetting('editor') ) {
 				setUserSetting('editor','tinymce');
 			}
@@ -60,6 +60,7 @@
 						// deleted widget
 					} else {
 						// update or added new widget
+						// @todo make fixDialogStartIcon for new widget
 						if ( api.ajaxActionId != null ) {
 							window.switchEditors.go( api.ajaxActionId, 'tmce' );
 							api.fixDialogStartIcon(api.ajaxActionId);
@@ -69,7 +70,7 @@
 				}	
 			});			
 		},	
-		addListener: function( id ) {
+		addEditorListener: function( id ) {
 			var p = $('#'+id).parents('.widget').attr('id');
 			if ( typeof p != 'undefined' ) {
 				$('#'+p+' .widget-control-save').on('click',function(ev){
@@ -88,6 +89,14 @@
 				});
 			}
 		},	
+		addListeners: function() {
+			api.addAjaxListener();
+			$(document).on('click','.widget-title, .widget-title-action',function(ev){
+				ev.preventDefault();
+				var p = $(this).parents('.widget').attr('id');
+				window.switchEditors.go( $('#'+p).find('.wp-editor-area').attr('id'), 'tmce' );
+			});		
+		},	
 		addButtons: function() {
 			tinymce.PluginManager.add(api.option.button_separator, function( editor, url ) {
 				editor.addButton(api.option.button_separator, {
@@ -102,7 +111,7 @@
 					if ( editor.id.indexOf('widget-black-studio-') >= 0 ) {
 						if ( language == WPGlobusCoreData.default_language ) {
 							api.fixDialogStartIcon(editor.id);
-							api.addListener(editor.id);
+							api.addEditorListener(editor.id);
 							api.content[editor.id]  = $('#'+editor.id).text();
 							api.language[editor.id] = api.option.language;
 							$('#'+editor.id).val( api.getTranslation(editor,language) );
