@@ -38,7 +38,8 @@ if ( ! class_exists( 'WPGlobus_BSWidget' ) ) :
 			}
 			
 			$enabled_pages = array(
-				'widgets.php'
+				'widgets.php',
+				'post.php'
 			);
 
 			if ( WPGlobus_WP::is_pagenow( $enabled_pages ) ) :
